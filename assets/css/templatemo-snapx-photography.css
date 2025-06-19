@@ -1649,6 +1649,48 @@ page heading
 }
 
 
+@media (max-width: 768px) {
+  .page-heading {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .page-heading h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 10px;
+  }
+
+  .page-heading h6 {
+    font-size: 14px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .page-heading p {
+    font-size: 14px;
+    margin: 20px 20px 0 20px;
+    padding: 20px 0;
+  }
+
+  .page-heading .main-content .counter div .value {
+    font-size: 28px;
+  }
+
+  .page-heading .main-content .counter div span {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-button1 a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
 /* 
 ---------------------------------------------
 Contests Page
@@ -2224,6 +2266,21 @@ b{
   color: #3ca642;
   font-size: 20px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contest-details .top-content h4 {
+    font-size: 6px;
+    line-height: 1.4;
+  }
+
+  .contest-details .top-content h6 {
+    font-size: 12px;
+  }
+
+  .contest-details .top-content {
+    padding: 20px 20px;
+  }
 }
 
 em1{
@@ -2899,7 +2956,7 @@ body {
 
   .main-banner .buttons a {
     width: 90% !important;
-    margin: 10px 0 !important;
+    margin: -80px 0 !important;
   }
 
   /* Pricing items stacked */
