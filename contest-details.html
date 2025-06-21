@@ -38,33 +38,95 @@ https:///tm-576-snapx-photography
       <div class="container">
           <div class="row">
               <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          <img src="assets/images/logo.png" alt="SnapX Photography Template">
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li><a href="index.html">Home</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)" class="active">Photos &amp; Videos</a>
-                              <ul class="sub-menu">
-                                  <li><a href="contests.html">Contests</a></li>
-                                  <li><a href="contest-details.html">Single Contest</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="categories.html">Categories</a></li>
-                          <li><a href="users.html">Users</a></li>
-                      </ul>   
-                      <div class="border-button">
-                        <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
-                      </div>
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
+                 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Bold Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; font-family: Arial, sans-serif;">
+
+  <nav style="display:flex; justify-content:space-between; align-items:center; padding:15px 30px; ; color:#fff; flex-wrbackground: linear-gradient(to right, #00bdfe, #7bdbfa)!important;ap:wrap;">
+    
+    <!-- Logo -->
+    <div class="mainer">
+                    <div style="width: 100px;" class="logo">
+                        
+                    </div>
+                    </div>
+    
+    <!-- Toggle button for mobile -->
+    <div id="toggle" onclick="toggleMenu()" style="display:none; cursor:pointer; font-size:24px;">
+      &#9776;
+    </div>
+    
+    <!-- Navigation Links -->
+   <div id="nav-links" style="
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+">
+  <a href="index.html" style="text-decoration:none; color:white;">Home</a>
+  <a href="Web.html" style="text-decoration:none; color:white;">Terms & Conditions</a>
+  <a href="contests.html" style="text-decoration:none; color:white;">Our projects</a>
+  <a href="users.html" style="text-decoration:none; color:white;">Contact Page</a>
+ 
+</div>
+
+  </nav>
+
+ <script>
+  let isOpen = false;
+
+  function toggleMenu() {
+    const links = document.getElementById("nav-links");
+
+    if (!isOpen) {
+      links.style.display = "flex";
+      setTimeout(() => {
+        links.style.maxHeight = "500px";
+      }, 10); // allow DOM to apply display first
+    } else {
+      links.style.maxHeight = "0";
+      setTimeout(() => {
+        links.style.display = "none";
+      }, 0); // hide instantly after collapsing
+    }
+
+    isOpen = !isOpen;
+  }
+
+  function checkWidth() {
+    const toggle = document.getElementById("toggle");
+    const links = document.getElementById("nav-links");
+
+    if (window.innerWidth <= 768) {
+      toggle.style.display = "block";
+      links.style.display = "none";
+      links.style.maxHeight = "0";
+      isOpen = false;
+    } else {
+      toggle.style.display = "none";
+      links.style.display = "flex";
+      links.style.flexDirection = "row";
+      links.style.alignItems = "center";
+      links.style.maxHeight = "none";
+    }
+  }
+
+  window.addEventListener('resize', checkWidth);
+  window.addEventListener('load', checkWidth);
+</script>
               </div>
           </div>
       </div>
